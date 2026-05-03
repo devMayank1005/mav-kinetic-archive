@@ -29,7 +29,7 @@ export default function Navigation() {
       {/* Top Header */}
       <div className="w-full px-8 py-6 flex justify-between items-center font-mono text-sm tracking-widest uppercase text-white bg-black/90 backdrop-blur-md border-b border-white/10 pointer-events-auto">
         <Link href="/" className="hover-underline-center cursor-pointer text-xl font-display font-bold">
-          MAV ©2024
+          MAV ©2026
         </Link>
         
         <div className="flex items-center gap-8 pointer-events-auto">
