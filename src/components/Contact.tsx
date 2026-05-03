@@ -4,62 +4,105 @@ import React from "react";
 
 export default function Contact() {
   return (
-    <section id="contact" className="w-full min-h-screen bg-[var(--color-background)] p-8 md:p-16 lg:p-24 flex flex-col justify-center items-center border-t border-[var(--color-surface)]">
-      <h2 className="font-display text-5xl md:text-8xl lg:text-[140px] font-bold uppercase mb-16 text-center tracking-tighter leading-none">
-        INITIATE <br className="hidden md:block" />
-        <span className="text-[var(--color-primary)] relative inline-block">
-          CONTACT
-          <span className="absolute bottom-4 left-0 w-full h-[0.2em] bg-[var(--color-primary)] mix-blend-multiply opacity-50 pointer-events-none"></span>
-        </span>
-      </h2>
-      
-      <form className="space-y-16 flex flex-col w-full max-w-4xl bg-white border-2 border-[var(--color-surface)] p-8 md:p-16 shadow-[16px_16px_0px_var(--color-surface)]">
-        <div className="relative group">
-          <input 
-            type="text" 
-            required
-            className="w-full bg-transparent border-b-2 border-[var(--color-surface)] py-4 font-body text-2xl md:text-5xl text-[var(--color-surface)] focus:outline-none focus:border-b-8 focus:border-[var(--color-primary)] transition-all duration-300 peer placeholder-transparent"
-            placeholder="NAME"
-            id="name"
-          />
-          <label htmlFor="name" className="absolute left-0 top-4 font-display font-bold text-2xl md:text-5xl text-[var(--color-surface)] opacity-30 peer-focus:-translate-y-12 peer-focus:text-xl peer-focus:text-[var(--color-primary)] peer-focus:opacity-100 peer-valid:-translate-y-12 peer-valid:text-xl peer-valid:opacity-100 transition-all duration-300 pointer-events-none uppercase">
-            NAME
-          </label>
+    <section id="contact" className="w-full bg-black px-8 md:px-16 py-24 min-h-screen">
+      <div className="max-w-[1440px] mx-auto">
+        {/* Hero Headline */}
+        <div className="mb-16 md:mb-24 border-t-2 border-white pt-8">
+          <h2 className="font-display text-[80px] md:text-[120px] font-bold text-white uppercase break-words leading-[0.85] tracking-tighter">
+            INITIATE<br/>CONTACT
+          </h2>
         </div>
 
-        <div className="relative group">
-          <input 
-            type="text" 
-            required
-            className="w-full bg-transparent border-b-2 border-[var(--color-surface)] py-4 font-body text-2xl md:text-5xl text-[var(--color-surface)] focus:outline-none focus:border-b-8 focus:border-[var(--color-primary)] transition-all duration-300 peer placeholder-transparent"
-            placeholder="PURPOSE"
-            id="purpose"
-          />
-          <label htmlFor="purpose" className="absolute left-0 top-4 font-display font-bold text-2xl md:text-5xl text-[var(--color-surface)] opacity-30 peer-focus:-translate-y-12 peer-focus:text-xl peer-focus:text-[var(--color-primary)] peer-focus:opacity-100 peer-valid:-translate-y-12 peer-valid:text-xl peer-valid:opacity-100 transition-all duration-300 pointer-events-none uppercase">
-            PURPOSE
-          </label>
+        {/* Main Content 2-Column Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-32">
+          
+          {/* Left Column: Details */}
+          <div className="lg:col-span-5 flex flex-col gap-12">
+            <div className="border-t-2 border-white pt-8">
+              <span className="font-mono text-xs font-bold tracking-widest text-[#00F0FF] block mb-4 uppercase">EMAIL</span>
+              <a href="mailto:hello@maventerprises.ai" className="font-display text-4xl md:text-5xl font-bold text-white hover:text-[#00F0FF] transition-colors duration-200 break-words tracking-tight">
+                HELLO@MAV.ENGINE
+              </a>
+            </div>
+            
+            <div className="border-t-2 border-white pt-8">
+              <span className="font-mono text-xs font-bold tracking-widest text-[#00F0FF] block mb-4 uppercase">WHATSAPP</span>
+              <a href="tel:+91987XXXXXXX" className="font-display text-4xl md:text-5xl font-bold text-white hover:text-[#00F0FF] transition-colors duration-200 tracking-tight">
+                +91 987XXXXXXX
+              </a>
+            </div>
+            
+            <div className="mt-auto hidden lg:block border-t-2 border-white pt-8">
+              <div className="w-24 h-24 border-2 border-white flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: Simple Form */}
+          <div className="lg:col-span-7 flex flex-col gap-8 bg-black">
+            <form onSubmit={(e) => e.preventDefault()} className="flex flex-col gap-8">
+              
+              <div className="group">
+                <label className="font-mono text-xs font-bold tracking-widest uppercase text-white mb-2 block">Name</label>
+                <input 
+                  type="text" 
+                  placeholder="ENTER_IDENTITY"
+                  className="w-full bg-transparent border-2 border-white text-white font-display text-xl font-bold p-4 focus:outline-none focus:border-[#00F0FF] transition-colors duration-200 placeholder:text-gray-600 rounded-none"
+                />
+              </div>
+              
+              <div className="group">
+                <label className="font-mono text-xs font-bold tracking-widest uppercase text-white mb-2 block">Email</label>
+                <input 
+                  type="email" 
+                  placeholder="COMM_CHANNEL"
+                  className="w-full bg-transparent border-2 border-white text-white font-display text-xl font-bold p-4 focus:outline-none focus:border-[#00F0FF] transition-colors duration-200 placeholder:text-gray-600 rounded-none"
+                />
+              </div>
+              
+              <div className="group relative">
+                <label className="font-mono text-xs font-bold tracking-widest uppercase text-white mb-2 block">Service Required</label>
+                <select 
+                  defaultValue=""
+                  className="w-full bg-black border-2 border-white text-white font-display text-xl font-bold p-4 focus:outline-none focus:border-[#00F0FF] transition-colors duration-200 appearance-none rounded-none cursor-pointer"
+                >
+                  <option value="" disabled>SELECT_SERVICE</option>
+                  <option value="agentic-ai">Agentic AI Development</option>
+                  <option value="cloud-infrastructure">Cloud Infrastructure</option>
+                  <option value="process-automation">Process Automation</option>
+                  <option value="enterprise-architecture">Enterprise Architecture</option>
+                  <option value="other">Other / Custom</option>
+                </select>
+                <div className="absolute right-4 bottom-5 pointer-events-none">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+              </div>
+              
+              <div className="group">
+                <label className="font-mono text-xs font-bold tracking-widest uppercase text-white mb-2 block">Message</label>
+                <textarea 
+                  rows={5}
+                  placeholder="TRANSMIT_INTENT"
+                  className="w-full bg-transparent border-2 border-white text-white font-display text-xl font-bold p-4 focus:outline-none focus:border-[#00F0FF] transition-colors duration-200 placeholder:text-gray-600 resize-none rounded-none"
+                ></textarea>
+              </div>
+              
+              <button 
+                type="submit"
+                className="w-full bg-[#00F0FF] text-black font-display font-black text-2xl md:text-3xl uppercase py-6 shadow-[8px_8px_0px_white] hover:translate-x-1 hover:translate-y-1 hover:shadow-[4px_4px_0px_white] active:translate-x-2 active:translate-y-2 active:shadow-none transition-all duration-150 rounded-none border-2 border-white"
+              >
+                SEND_MESSAGE
+              </button>
+            </form>
+          </div>
         </div>
 
-        <div className="relative group">
-          <input 
-            type="text" 
-            required
-            className="w-full bg-transparent border-b-2 border-[var(--color-surface)] py-4 font-body text-2xl md:text-5xl text-[var(--color-surface)] focus:outline-none focus:border-b-8 focus:border-[var(--color-primary)] transition-all duration-300 peer placeholder-transparent"
-            placeholder="BUDGET"
-            id="budget"
-          />
-          <label htmlFor="budget" className="absolute left-0 top-4 font-display font-bold text-2xl md:text-5xl text-[var(--color-surface)] opacity-30 peer-focus:-translate-y-12 peer-focus:text-xl peer-focus:text-[var(--color-primary)] peer-focus:opacity-100 peer-valid:-translate-y-12 peer-valid:text-xl peer-valid:opacity-100 transition-all duration-300 pointer-events-none uppercase">
-            BUDGET
-          </label>
+        {/* Decorative Cinematic Element */}
+        <div className="mt-32 w-full h-[2px] bg-white/20 relative overflow-hidden">
+          <div className="absolute inset-0 bg-[#00F0FF] w-1/4 animate-[pulse_2s_infinite]"></div>
         </div>
-
-        <button 
-          type="submit"
-          className="mt-12 bg-[var(--color-surface)] text-[var(--color-background)] px-12 py-8 font-mono font-bold text-2xl md:text-4xl tracking-widest uppercase hover:bg-[var(--color-primary)] hover:text-white transition-colors duration-300 self-center shadow-[12px_12px_0px_var(--color-primary)] glitch-hover w-full md:w-auto"
-        >
-          SEND MESSAGE
-        </button>
-      </form>
+      </div>
     </section>
   );
 }

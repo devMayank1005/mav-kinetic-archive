@@ -1,70 +1,81 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 export default function Terminal() {
   return (
-    <section id="team" className="w-full min-h-screen bg-[#000000] p-8 md:p-16 lg:p-24 border-t border-[var(--color-surface)] flex flex-col relative overflow-hidden">
-      {/* Decorative scanner line */}
-      <div className="absolute top-0 left-1/4 w-[1px] h-full bg-[#00F0FF] opacity-20 hidden lg:block"></div>
-      <div className="absolute top-1/3 left-0 w-full h-[1px] bg-[#FF003C] opacity-20 hidden lg:block"></div>
-      
-      <div className="relative z-10 mb-24 max-w-5xl">
-        <h2 className="font-display text-6xl md:text-8xl lg:text-[140px] font-bold uppercase tracking-tighter text-white leading-[0.85] mb-8">
-          THE TEAM <br /> BEHIND MAV
+    <section id="team" className="w-full bg-black px-8 md:px-16 py-24 min-h-screen">
+      {/* Massive Title Section */}
+      <div className="max-w-[1440px] mx-auto mb-32">
+        <h2 className="font-display text-[80px] md:text-[120px] font-bold text-white uppercase break-words leading-[0.85] tracking-tighter">
+          THE<br/>
+          <span className="text-[#00F0FF]">ARCHITECTS</span>
         </h2>
-        <p className="font-mono text-xl md:text-2xl text-[#00F0FF] tracking-widest uppercase border-l-4 border-[#FF003C] pl-6 py-2">
-          Architects of disruption
-        </p>
+        <div className="w-full h-1 bg-white mt-8"></div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-8 relative z-10 pb-16">
-        
-        {/* Founder 1 */}
-        <div className="relative group lg:-translate-y-8">
-          <div className="absolute inset-0 bg-[#00F0FF] translate-x-3 translate-y-3 transition-transform group-hover:translate-x-5 group-hover:translate-y-5"></div>
-          <div className="relative bg-black border-2 border-white p-8 h-full flex flex-col z-10">
-            <div className="text-white font-mono text-sm mb-12 border-b-2 border-[#00F0FF] pb-2 inline-block w-max">
-              // 01
-            </div>
-            <h3 className="font-display text-5xl font-bold text-white mb-2 uppercase">MAYANK</h3>
-            <h4 className="font-mono text-[#00F0FF] text-sm tracking-widest mb-8">ARCHITECT / FULL-STACK</h4>
-            <p className="font-body text-[#e2e2e2] text-lg leading-relaxed mt-auto">
-              Engineered the foundational monolithic structures of the MAV system. Specializes in low-latency high-frequency distribution protocols and aggressive system-level optimizations.
-            </p>
+      {/* Founders Grid */}
+      <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Founder 01: Mayank */}
+        <div className="group relative border-2 border-white bg-black p-6 flex flex-col transition-all duration-300 hover:shadow-[8px_8px_0px_#00F0FF] hover:-translate-y-2">
+          <div className="relative w-full aspect-[4/5] overflow-hidden grayscale contrast-125 mb-8 border border-white/20">
+            {/* Using a solid background placeholder until images are added */}
+            <div className="absolute inset-0 bg-[#111] group-hover:bg-[#222] transition-colors duration-500"></div>
+          </div>
+          <div className="mt-auto">
+            <span className="font-mono text-xs font-bold text-[#00F0FF] tracking-widest block mb-2 uppercase">LEAD ARCHITECT</span>
+            <h3 className="font-display text-4xl md:text-5xl text-white font-bold uppercase leading-none tracking-tighter">MAYANK</h3>
+          </div>
+          <div className="mt-8 pt-8 border-t border-white/20 flex justify-between items-center">
+            <span className="font-mono text-xs text-gray-500 tracking-widest uppercase">01 / FOUNDER</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00F0FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
           </div>
         </div>
 
-        {/* Founder 2 */}
-        <div className="relative group lg:translate-y-16">
-          <div className="absolute inset-0 bg-[#FF003C] translate-x-3 translate-y-3 transition-transform group-hover:translate-x-5 group-hover:translate-y-5"></div>
-          <div className="relative bg-black border-2 border-white p-8 h-full flex flex-col z-10">
-            <div className="text-white font-mono text-sm mb-12 border-b-2 border-[#FF003C] pb-2 inline-block w-max">
-              // 02
-            </div>
-            <h3 className="font-display text-5xl font-bold text-white mb-2 uppercase">ANIKET</h3>
-            <h4 className="font-mono text-[#FF003C] text-sm tracking-widest mb-8">AI ENGINEER / AGENTIC SYSTEMS</h4>
-            <p className="font-body text-[#e2e2e2] text-lg leading-relaxed mt-auto">
-              Pioneer of agentic swarm logic. Translating complex neural architectures into actionable autonomous systems that redefine operational speed.
-            </p>
+        {/* Founder 02: Aniket */}
+        <div className="group relative border-2 border-white bg-black p-6 flex flex-col md:translate-y-12 transition-all duration-300 hover:shadow-[8px_8px_0px_#FF003C] hover:-translate-y-2">
+          <div className="relative w-full aspect-[4/5] overflow-hidden grayscale contrast-125 mb-8 border border-white/20">
+            <div className="absolute inset-0 bg-[#111] group-hover:bg-[#222] transition-colors duration-500"></div>
+          </div>
+          <div className="mt-auto">
+            <span className="font-mono text-xs font-bold text-[#FF003C] tracking-widest block mb-2 uppercase">AI ENGINEER</span>
+            <h3 className="font-display text-4xl md:text-5xl text-white font-bold uppercase leading-none tracking-tighter">ANIKET</h3>
+          </div>
+          <div className="mt-8 pt-8 border-t border-white/20 flex justify-between items-center">
+            <span className="font-mono text-xs text-gray-500 tracking-widest uppercase">02 / FOUNDER</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FF003C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
           </div>
         </div>
 
-        {/* Founder 3 */}
-        <div className="relative group">
-          <div className="absolute inset-0 bg-[#BDFF00] translate-x-3 translate-y-3 transition-transform group-hover:translate-x-5 group-hover:translate-y-5"></div>
-          <div className="relative bg-black border-2 border-white p-8 h-full flex flex-col z-10">
-            <div className="text-white font-mono text-sm mb-12 border-b-2 border-[#BDFF00] pb-2 inline-block w-max">
-              // 03
-            </div>
-            <h3 className="font-display text-5xl font-bold text-white mb-2 uppercase">VASHU</h3>
-            <h4 className="font-mono text-[#BDFF00] text-sm tracking-widest mb-8">GROWTH / AUTOMATION ENG</h4>
-            <p className="font-body text-[#e2e2e2] text-lg leading-relaxed mt-auto">
-              Scaling systems beyond human limitations. Integrates automation loops with growth metrics to ensure MAV's dominance in high-frequency environments.
-            </p>
+        {/* Founder 03: Vashu */}
+        <div className="group relative border-2 border-white bg-black p-6 flex flex-col transition-all duration-300 hover:shadow-[8px_8px_0px_#BDFF00] hover:-translate-y-2">
+          <div className="relative w-full aspect-[4/5] overflow-hidden grayscale contrast-125 mb-8 border border-white/20">
+             <div className="absolute inset-0 bg-[#111] group-hover:bg-[#222] transition-colors duration-500"></div>
+          </div>
+          <div className="mt-auto">
+            <span className="font-mono text-xs font-bold text-[#BDFF00] tracking-widest block mb-2 uppercase">GROWTH DIRECTOR</span>
+            <h3 className="font-display text-4xl md:text-5xl text-white font-bold uppercase leading-none tracking-tighter">VASHU</h3>
+          </div>
+          <div className="mt-8 pt-8 border-t border-white/20 flex justify-between items-center">
+            <span className="font-mono text-xs text-gray-500 tracking-widest uppercase">03 / FOUNDER</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#BDFF00" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
           </div>
         </div>
+      </div>
 
+      {/* Narrative Section */}
+      <div className="max-w-[1440px] mx-auto mt-48 grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+        <div className="md:col-span-8">
+          <p className="font-display text-2xl md:text-3xl font-bold text-white max-w-3xl leading-snug tracking-tight">
+            WE DO NOT BUILD FOR COMFORT. WE DESIGN FOR DISRUPTION. THREE MINDS MERGING ARCHITECTURE, INTELLIGENCE, AND SCALE.
+          </p>
+        </div>
+        <div className="md:col-span-4 flex justify-end">
+          <div className="w-24 h-24 border-2 border-white flex items-center justify-center hover:bg-white group transition-all cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:stroke-black transition-colors"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </div>
+        </div>
       </div>
     </section>
   );
