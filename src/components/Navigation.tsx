@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function Navigation() {
   const [time, setTime] = useState("");
@@ -30,18 +31,21 @@ export default function Navigation() {
           MAV ©2024
         </div>
         <div className="flex flex-col items-end gap-2">
-          <a href="#services" className="pointer-events-auto hover-underline-center cursor-pointer">
+          <Link href="/services" className="pointer-events-auto hover-underline-center cursor-pointer">
             SERVICES
-          </a>
-          <a href="#process" className="pointer-events-auto hover-underline-center cursor-pointer">
-            PROCESS
-          </a>
-          <a href="#team" className="pointer-events-auto hover-underline-center cursor-pointer">
+          </Link>
+          <Link href="/industries" className="pointer-events-auto hover-underline-center cursor-pointer">
+            INDUSTRIES
+          </Link>
+          <Link href="/platform" className="pointer-events-auto hover-underline-center cursor-pointer">
+            PLATFORM
+          </Link>
+          <Link href="/#team" className="pointer-events-auto hover-underline-center cursor-pointer">
             TEAM
-          </a>
-          <a href="#contact" className="pointer-events-auto hover-underline-center cursor-pointer">
+          </Link>
+          <Link href="/contact" className="pointer-events-auto hover-underline-center cursor-pointer">
             CONTACT
-          </a>
+          </Link>
         </div>
       </div>
       <div className="flex justify-between items-end font-mono text-sm tracking-widest uppercase">
